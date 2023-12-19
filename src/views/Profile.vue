@@ -9,7 +9,7 @@
 
   onMounted(async () => {
     try {
-      const response = await fetch('/src/assets/json/squad-data.json');
+      const response = await fetch('./assets/json/squad-data.json');
       const data = await response.json();
       const foundProfile = data.find((p: Profile) => p.id == props.id);
       console.log(foundProfile, "my profile");
@@ -34,7 +34,7 @@
 
   <div v-if="profile" class="main-profile">
     <div class="main-profile-img-name">
-      <img class="main-profile-img" :src="'/'+profile.imageOnHover" >
+      <img class="main-profile-img" :src="profile.imageOnHover" >
       <div class="main-profile-name">
         <h1>{{ profile.name}}</h1>
         <div>

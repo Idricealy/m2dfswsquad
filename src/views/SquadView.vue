@@ -9,7 +9,7 @@
 
   const fetchData = async () => {
     try {
-      const response = await fetch("/src/assets/json/squad-data.json"); // Ajuster le chemin d'accès au fichier selon votre structure
+      const response = await fetch("src/assets/json/squad-data.json"); // Ajuster le chemin d'accès au fichier selon votre structure
       const data = await response.json();
       profiles.value = data; // Assurez-vous que le format du fichier JSON correspond à votre modèle de profil
     } catch (error) {
